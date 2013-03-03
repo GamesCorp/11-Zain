@@ -10,17 +10,19 @@ import java.awt.image.DataBufferInt;
 import javax.swing.JFrame;
 
 import com.AdamWalters.com.zain.graphics.Screen;
+import com.AdamWalters.com.zain.input.InputHandler;
 
 public class Game extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
 
 	public static int width = 300;
-	public static int height = 168;
+	public static int height = 168; //16 * 9
 	public static int scale = 3;
 	public static String title;
 
 	private Thread thread;
 	private JFrame frame;
+	private InputHandler key;
 	private boolean running = false;
 
 	private Screen screen;
@@ -33,8 +35,10 @@ public class Game extends Canvas implements Runnable {
 		setPreferredSize(size);
 
 		screen = new Screen(width, height);
-
 		frame = new JFrame();
+		
+		key = new InputHandler();
+		addKeyListener(key);
 	}
 
 	public synchronized void start() {
@@ -81,10 +85,15 @@ public class Game extends Canvas implements Runnable {
 		}
 		stop();
 	}
+	
 	int x = 0, y = 0;
+	
 	public void tick() {
-		y++;
-		x++;
+		key.tick();
+		if (key.up) y--;
+		if (key.down) y++;
+		if (key.left) x--;
+		if (key.right) x++;
 	}
 
 	public void render() {
