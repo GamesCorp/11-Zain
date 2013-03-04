@@ -44,18 +44,26 @@ public class Screen {
 			}
 		}
 	}
-	
-	public void renderPlayer(int xp, int yp, Sprite sprite) {
+	//all 32's/any other resolution int needs to be changed to the players resolution. Also th3 31 or 15 needs to be swapped for the corresponding resolution.
+	public void renderPlayer(int xp, int yp, Sprite sprite, int flip) {
 		xp -= xOffset;
 		yp -= yOffset;
-		for (int y = 0; y < 16; y++) {
+		for (int y = 0; y < 32; y++) {
 			int ya = y + yp;
-			for (int x = 0; x < 16; x++) {
+			int ys = y;
+			if (flip == 2 || flip == 3) ys = 31 - y;			
+			for (int x = 0; x < 32; x++) {
 				int xa = x + xp;
-				if (xa < - 16 || xa >= width || ya < 0 || ya >= height) break;
+				int xs = x;
+				if (flip == 1 || flip == 3) xs = 31 - x;
+				if (xa < - 32 || xa >= width || ya < 0 || ya >= height) break;
 				if (xa < 0) xa = 0;
-				int col = sprite.pixels[x + y * 16];
-				if (col != 0xff0094ff) pixels[xa + ya * width] = sprite.pixels[x + y * 16];
+				int col = sprite.pixels[xs + ys * 32];
+				//king cherno
+				if (col != 0xffff00ff) pixels[xa + ya * width] = col;
+				//MushroomGreen
+				//if (col != 0xff0094FF) pixels[xa + ya * width] = col;
+
 			}
 		}
 	}
