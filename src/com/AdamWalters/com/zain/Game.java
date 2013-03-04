@@ -9,6 +9,8 @@ import java.awt.image.DataBufferInt;
 
 import javax.swing.JFrame;
 
+import com.AdamWalters.com.zain.Level.Level;
+import com.AdamWalters.com.zain.Level.RandomLevel;
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.input.InputHandler;
 
@@ -23,6 +25,7 @@ public class Game extends Canvas implements Runnable {
 	private Thread thread;
 	private JFrame frame;
 	private InputHandler key;
+	private Level level;
 	private boolean running = false;
 
 	private Screen screen;
@@ -36,8 +39,9 @@ public class Game extends Canvas implements Runnable {
 
 		screen = new Screen(width, height);
 		frame = new JFrame();
-		
 		key = new InputHandler();
+		level = new RandomLevel(64, 64);
+		
 		addKeyListener(key);
 	}
 
@@ -106,7 +110,7 @@ public class Game extends Canvas implements Runnable {
 		}
 		
 		screen.clear();
-		screen.render(x, y);
+		level.render(x, y, screen);
 
 		for (int i = 0; i < pixels.length; i++) {
 			pixels[i] = screen.pixels[i];
