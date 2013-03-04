@@ -1,10 +1,13 @@
 package com.AdamWalters.com.zain.mob;
 
+import com.AdamWalters.com.zain.graphics.Screen;
+import com.AdamWalters.com.zain.graphics.Sprite;
 import com.AdamWalters.com.zain.input.InputHandler;
 
 public class Player extends Mob {
 	
 	private InputHandler input;
+	
 	
 	public Player(InputHandler input) {
 		this.input = input;
@@ -26,7 +29,11 @@ public class Player extends Mob {
 		if (xa != 0 || ya != 0) move(xa, ya);
 	}
 	
-	public void render() {
+	public void render(Screen screen) {
+		int xx = x - 16;
+		int yy = y - 16;
+		
+		screen.renderPlayer(xx, yy, Sprite.player0);
 	}
 
 }
