@@ -9,7 +9,7 @@ public class Sprite {
 	
 											/**size, x, y, **/
 	public static Sprite grass = new Sprite(16, 0, 0, SpriteSheet.tiles);
-	public static Sprite voidSprite = new Sprite(16, 0x1B87E0);
+	public static Sprite voidSprite = new Sprite(16, 0);
 	
 	//all 32's / any other resolutions int need to be changed to the players resolution.
 	public static Sprite player_forward = new Sprite(32, 0, 4, SpriteSheet.tiles);
