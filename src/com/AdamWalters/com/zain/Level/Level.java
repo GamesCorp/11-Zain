@@ -6,18 +6,19 @@ import com.AdamWalters.com.zain.graphics.Screen;
 public class Level {
 	
 	protected int width, height;
+	protected int[] tilesInt;
 	protected int[] tiles;
-	
 	
 	public Level(int width, int height) {
 		this.width = width;
 		this.height = height;
-		tiles = new int [width * height];
+		tilesInt = new int [width * height];
 		generateLevel();
 	}
 	
 	public Level(String path) {
 		loadLevel(path);
+		generateLevel();
 	}
 
 	protected void generateLevel() {
@@ -45,12 +46,15 @@ public class Level {
 			}
 		}
 	}
-	
+	//Grass = 0xFF00 / 0x00FF00
+	//Flower = 0xFFFF00
+	//Rock = 0x878787
+	//first two ff = 100% opaque & first two 00 = 100% transparent.
 	public Tile getTile(int x, int y) {
 		if (x < 0 || y < 0 || x >= width || y >= height) return Tile.voidTile;
-		if (tiles[x + y * width] == 0) return Tile.grass;
-		if (tiles[x + y * width] == 1) return Tile.flower;
-		if (tiles[x + y * width] == 2) return Tile.rock;
+		if (tiles[x + y * width] == 0xff00ff00) return Tile.grass;
+		if (tiles[x + y * width] == 0xffffff00) return Tile.flower;
+		if (tiles[x + y * width] == 0xff7f7f00) return Tile.rock;
 		return Tile.voidTile;
 	}
 	
