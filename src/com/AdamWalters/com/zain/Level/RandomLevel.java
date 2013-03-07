@@ -1,4 +1,4 @@
-package com.AdamWalters.com.zain.Level;
+package com.AdamWalters.com.zain.level;
 
 import java.util.Random;
 

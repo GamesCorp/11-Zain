@@ -1,11 +1,12 @@
-package com.AdamWalters.com.zain.level.tiles;
+package com.AdamWalters.com.zain.level.tiles.spawn_level;
 
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.graphics.Sprite;
+import com.AdamWalters.com.zain.level.tiles.Tile;
 
-public class RockTile extends Tile {
+public class SpawnCobbleTile extends Tile {
 
-	public RockTile(Sprite sprite) {
+	public SpawnCobbleTile(Sprite sprite) {
 		super(sprite);
 	}
 	
@@ -16,5 +17,10 @@ public class RockTile extends Tile {
 	public boolean solid() {
 		return true;		//<<--Redundant if left false. / This makes the Tile solid.
 	} 
+	
+	public boolean breakable() {
+		return true;
+	}
+
 
 }

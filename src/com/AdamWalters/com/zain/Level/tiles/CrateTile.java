@@ -3,9 +3,9 @@ package com.AdamWalters.com.zain.level.tiles;
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.graphics.Sprite;
 
-public class RockTile extends Tile {
+public class CrateTile extends Tile {
 
-	public RockTile(Sprite sprite) {
+	public CrateTile(Sprite sprite) {
 		super(sprite);
 	}
 	

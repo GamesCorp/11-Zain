@@ -1,6 +1,6 @@
-package com.AdamWalters.com.zain.Level;
+package com.AdamWalters.com.zain.level;
 
-import com.AdamWalters.com.zain.Level.tiles.Tile;
+import com.AdamWalters.com.zain.level.tiles.Tile;
 import com.AdamWalters.com.zain.graphics.Screen;
 
 public class Level {
@@ -8,6 +8,8 @@ public class Level {
 	protected int width, height;
 	protected int[] tilesInt;
 	protected int[] tiles;
+	
+	public static Level spawn = new SpawnLevel ("/levels/level.png");
 	
 	public Level(int width, int height) {
 		this.width = width;
@@ -52,9 +54,13 @@ public class Level {
 	//first two ff = 100% opaque & first two 00 = 100% transparent.
 	public Tile getTile(int x, int y) {
 		if (x < 0 || y < 0 || x >= width || y >= height) return Tile.voidTile;
-		if (tiles[x + y * width] == 0xff00ff00) return Tile.grass;
-		if (tiles[x + y * width] == 0xffffff00) return Tile.flower;
-		if (tiles[x + y * width] == 0xff7f7f00) return Tile.rock;
+		if (tiles[x + y * width] == Tile.col_spawn_grass) return Tile.spawn_grass;
+		if (tiles[x + y * width] == Tile.col_spawn_flower) return Tile.spawn_flower;
+		if (tiles[x + y * width] == Tile.col_spawn_rock) return Tile.spawn_rock;
+		if (tiles[x + y * width] == Tile.col_spawn_cobble) return Tile.spawn_cobble;
+		if (tiles[x + y * width] == Tile.col_spawn_door) return Tile.spawn_door;
+		if (tiles[x + y * width] == Tile.col_spawn_glass) return Tile.spawn_glass;
+		if (tiles[x + y * width] == Tile.col_spawn_crate) return Tile.spawn_crate;
 		return Tile.voidTile;
 	}
 	

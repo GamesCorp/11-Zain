@@ -1,16 +1,21 @@
-package com.AdamWalters.com.zain.level.tiles;
+package com.AdamWalters.com.zain.level.tiles.spawn_level;
 
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.graphics.Sprite;
+import com.AdamWalters.com.zain.level.tiles.Tile;
 
-public class VoidTile extends Tile {
+public class SpawnGrassTile extends Tile {
 
-	public VoidTile(Sprite sprite) {
-		super(sprite);	
+	public SpawnGrassTile(Sprite sprite) {
+		super(sprite);
 	}
 	
 	public void render(int x, int y, Screen screen) {
 		screen.renderTile(x << 4, y << 4, this);
+	}
+
+	public boolean breakable() {
+		return true;
 	}
 	
 	
@@ -18,5 +23,5 @@ public class VoidTile extends Tile {
 	public boolean solid() {
 		return true;		<<--Redundant if left false. / This makes the Tile solid.
 	} **/
-
+	
 }
