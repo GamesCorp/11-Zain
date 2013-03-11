@@ -3,9 +3,9 @@ package com.AdamWalters.com.zain.Level.tiles;
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.graphics.Sprite;
 
-public class FlowerTile extends Tile {
+public class Cobble2Tile extends Tile {
 
-	public FlowerTile(Sprite sprite) {
+	public Cobble2Tile(Sprite sprite) {
 		super(sprite);
 	}
 	
@@ -13,10 +13,8 @@ public class FlowerTile extends Tile {
 		screen.renderTile(x << 4, y << 4, this);
 	}
 	
-	
-	/**
 	public boolean solid() {
-		return true;		<<--Redundant if left false. / This makes the Tile solid.
-	} **/
+		return true;		//<<--Redundant if left false. / This makes the Tile solid.
+	} 
 
 }

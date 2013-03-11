@@ -1,11 +1,9 @@
-package com.AdamWalters.com.zain.level;
+package com.AdamWalters.com.zain.Level;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
-
-import com.AdamWalters.com.zain.level.tiles.Tile;
+import com.AdamWalters.com.zain.Level.tiles.Tile;
 
 public class SpawnLevel extends Level {
 

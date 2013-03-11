@@ -1,12 +1,12 @@
 package com.AdamWalters.com.zain.Level.tiles.spawn_level;
 
+import com.AdamWalters.com.zain.Level.tiles.Tile;
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.graphics.Sprite;
-import com.AdamWalters.com.zain.Level.tiles.Tile;
 
-public class SpawnFlowerTile extends Tile {
+public class SpawnCobble2Tile extends Tile {
 
-	public SpawnFlowerTile(Sprite sprite) {
+	public SpawnCobble2Tile(Sprite sprite) {
 		super(sprite);
 	}
 	
@@ -14,14 +14,13 @@ public class SpawnFlowerTile extends Tile {
 		screen.renderTile(x << 4, y << 4, this);
 	}
 	
+	public boolean solid() {
+		return true;		//<<--Redundant if left false. / This makes the Tile solid.
+	} 
+	
 	public boolean breakable() {
 		return true;
 	}
-	
-	
-	/**
-	public boolean solid() {
-		return true;		<<--Redundant if left false. / This makes the Tile solid.
-	} **/
+
 
 }

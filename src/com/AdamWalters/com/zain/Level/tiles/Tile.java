@@ -1,14 +1,14 @@
-package com.AdamWalters.com.zain.level.tiles;
+package com.AdamWalters.com.zain.Level.tiles;
 
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.graphics.Sprite;
-import com.AdamWalters.com.zain.level.tiles.spawn_level.SpawnCobbleTile;
-import com.AdamWalters.com.zain.level.tiles.spawn_level.SpawnCrateTile;
-import com.AdamWalters.com.zain.level.tiles.spawn_level.SpawnDoorTile;
-import com.AdamWalters.com.zain.level.tiles.spawn_level.SpawnFlowerTile;
-import com.AdamWalters.com.zain.level.tiles.spawn_level.SpawnGlassTile;
-import com.AdamWalters.com.zain.level.tiles.spawn_level.SpawnGrassTile;
-import com.AdamWalters.com.zain.level.tiles.spawn_level.SpawnRockTile;
+import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnCobbleTile;
+import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnCrateTile;
+import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnDoorTile;
+import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnFlowerTile;
+import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnGlassTile;
+import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnGrassTile;
+import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnRockTile;
 
 public class Tile {
 	
@@ -36,6 +36,7 @@ public class Tile {
 	public static final int col_spawn_flower = 0xffffff00;
 	public static final int col_spawn_rock = 0xff808080;
 	public static final int col_spawn_cobble = 0xff282828;
+	public static final int col_spawn_cobble2 = 0xff
 	public static final int col_spawn_door = 0xff000000;
 	public static final int col_spawn_glass = 0xff43DBDB;
 	public static final int col_spawn_crate = 0xff7F3300;
