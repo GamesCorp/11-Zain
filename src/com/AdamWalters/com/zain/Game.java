@@ -13,8 +13,7 @@ import javax.swing.JFrame;
 
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.input.InputHandler;
-import com.AdamWalters.com.zain.Level.Level;
-import com.AdamWalters.com.zain.Level.SpawnLevel;
+import com.AdamWalters.com.zain.level.Level;
 import com.AdamWalters.com.zain.mob.Player;
 
 public class Game extends Canvas implements Runnable {
@@ -46,7 +45,7 @@ public class Game extends Canvas implements Runnable {
 		key = new InputHandler();
 		level = Level.spawn;
 		//Adjust player coordinates--v
-		player = new Player(6 * 16, 6 * 16, key);
+		player = new Player(12 * 16, 23 * 16, key);
 		
 		addKeyListener(key);
 	}

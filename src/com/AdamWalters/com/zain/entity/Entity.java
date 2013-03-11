@@ -3,7 +3,7 @@ package com.AdamWalters.com.zain.entity;
 import java.util.Random;
 
 import com.AdamWalters.com.zain.graphics.Screen;
-import com.AdamWalters.com.zain.Level.Level;
+import com.AdamWalters.com.zain.level.Level;
 
 public abstract class Entity {
 	

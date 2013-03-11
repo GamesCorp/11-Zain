@@ -2,7 +2,7 @@ package com.AdamWalters.com.zain.graphics;
 
 import java.util.Random;
 
-import com.AdamWalters.com.zain.Level.tiles.Tile;
+import com.AdamWalters.com.zain.level.tiles.Tile;
 
 public class Screen {
 

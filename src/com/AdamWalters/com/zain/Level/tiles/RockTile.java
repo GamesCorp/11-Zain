@@ -1,4 +1,4 @@
-package com.AdamWalters.com.zain.Level.tiles;
+package com.AdamWalters.com.zain.level.tiles;
 
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.graphics.Sprite;

@@ -16,7 +16,8 @@ public class Sprite {
 	public static Sprite door = new Sprite(16, 2, 0, SpriteSheet.tiles);
 	public static Sprite glass = new Sprite(16, 3, 0, SpriteSheet.tiles);
 	public static Sprite crate = new Sprite(16, 4, 0, SpriteSheet.tiles);
-
+	public static Sprite spawnpoint = new Sprite(16, 5, 0, SpriteSheet.tiles);
+	
 	public static Sprite voidSprite = new Sprite(16, 0xfc0cf);
 	
 	//Spawn Level Sprites here:
@@ -28,7 +29,8 @@ public class Sprite {
 	public static Sprite spawn_door = new Sprite(16, 2, 0, SpriteSheet.spawn_level);
 	public static Sprite spawn_glass = new Sprite(16, 3, 0, SpriteSheet.spawn_level);
 	public static Sprite spawn_crate = new Sprite(16, 4, 0, SpriteSheet.spawn_level);
-	
+	public static Sprite spawn_spawnpoint = new Sprite(16, 5, 0, SpriteSheet.spawn_level);
+
 	//player Level Sprites here:
 	
 	//all 32's / any other resolutions int need to be changed to the players resolution.

@@ -1,7 +1,7 @@
-package com.AdamWalters.com.zain.Level;
+package com.AdamWalters.com.zain.level;
 
-import com.AdamWalters.com.zain.Level.tiles.Tile;
 import com.AdamWalters.com.zain.graphics.Screen;
+import com.AdamWalters.com.zain.level.tiles.Tile;
 
 public class Level {
 	
@@ -58,10 +58,11 @@ public class Level {
 		if (tiles[x + y * width] == Tile.col_spawn_flower) return Tile.spawn_flower;
 		if (tiles[x + y * width] == Tile.col_spawn_rock) return Tile.spawn_rock;
 		if (tiles[x + y * width] == Tile.col_spawn_cobble) return Tile.spawn_cobble;
-		if (tiles[x + y * width] == Tile.col_spawn_cobble2) return Tile.spawn_crate;
+		if (tiles[x + y * width] == Tile.col_spawn_cobble2) return Tile.spawn_cobble2;
 		if (tiles[x + y * width] == Tile.col_spawn_door) return Tile.spawn_door;
 		if (tiles[x + y * width] == Tile.col_spawn_glass) return Tile.spawn_glass;
 		if (tiles[x + y * width] == Tile.col_spawn_crate) return Tile.spawn_crate;
+		if (tiles[x + y * width] == Tile.col_spawn_spawnpoint) return Tile.spawn_spawnpoint;
 		
 		return Tile.voidTile;
 	}
