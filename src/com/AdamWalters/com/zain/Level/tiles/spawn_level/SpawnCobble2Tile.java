@@ -1,8 +1,8 @@
 package com.AdamWalters.com.zain.level.tiles.spawn_level;
 
-import com.AdamWalters.com.zain.level.tiles.Tile;
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.graphics.Sprite;
+import com.AdamWalters.com.zain.level.tiles.Tile;
 
 public class SpawnCobble2Tile extends Tile {
 
