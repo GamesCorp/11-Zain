@@ -32,7 +32,8 @@ public class Level {
 	public void tick() {
 	}
 	
-	private void time() {
+	@SuppressWarnings
+	("unused") private void time() {
 	}
 	
 	public void render(int xScroll, int yScroll, Screen screen) {
