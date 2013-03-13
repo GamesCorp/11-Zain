@@ -11,10 +11,10 @@ import java.awt.image.DataBufferInt;
 
 import javax.swing.JFrame;
 
+import com.AdamWalters.com.zain.Level.Level;
+import com.AdamWalters.com.zain.Level.TileCoordinate;
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.input.InputHandler;
-import com.AdamWalters.com.zain.level.Level;
-import com.AdamWalters.com.zain.level.TileCoordinate;
 import com.AdamWalters.com.zain.mob.Player;
 
 public class Game extends Canvas implements Runnable {

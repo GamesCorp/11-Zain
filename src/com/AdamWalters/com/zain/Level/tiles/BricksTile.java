@@ -1,11 +1,11 @@
-package com.AdamWalters.com.zain.level.tiles;
+package com.AdamWalters.com.zain.Level.tiles;
 
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.graphics.Sprite;
 
-public class SpawnPointTile extends Tile {
+public class BricksTile extends Tile {
 
-	public SpawnPointTile(Sprite sprite) {
+	public BricksTile(Sprite sprite) {
 		super(sprite);
 	}
 	

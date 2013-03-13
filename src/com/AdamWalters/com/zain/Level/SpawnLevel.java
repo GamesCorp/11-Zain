@@ -1,4 +1,4 @@
-package com.AdamWalters.com.zain.level;
+package com.AdamWalters.com.zain.Level;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
