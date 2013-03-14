@@ -9,27 +9,31 @@ public class Sprite {
 	
 											/**size, x, y, **/
 	public static Sprite grass = new Sprite(16, 0, 0, SpriteSheet.tiles);
+	public static Sprite dirt = new Sprite(16, 1, 0, SpriteSheet.tiles);
+	public static Sprite tilledDirt = new Sprite(16, 1, 1, SpriteSheet.tiles);
 	public static Sprite flower = new Sprite(16, 0, 1, SpriteSheet.tiles);
 	public static Sprite rock = new Sprite(16, 0, 2, SpriteSheet.tiles);
-	public static Sprite cobble = new Sprite(16, 1, 0, SpriteSheet.tiles);
-	public static Sprite cobble2 = new Sprite(16, 1, 1, SpriteSheet.tiles);
-	public static Sprite door = new Sprite(16, 2, 0, SpriteSheet.tiles);
-	public static Sprite glass = new Sprite(16, 3, 0, SpriteSheet.tiles);
-	public static Sprite crate = new Sprite(16, 4, 0, SpriteSheet.tiles);
-	public static Sprite bricks = new Sprite(16, 5, 0, SpriteSheet.tiles);
+	public static Sprite cobble = new Sprite(16, 2, 0, SpriteSheet.tiles);
+	public static Sprite cobble2 = new Sprite(16, 2, 1, SpriteSheet.tiles);
+	public static Sprite door = new Sprite(16, 3, 0, SpriteSheet.tiles);
+	public static Sprite glass = new Sprite(16, 4, 0, SpriteSheet.tiles);
+	public static Sprite crate = new Sprite(16, 5, 0, SpriteSheet.tiles);
+	public static Sprite bricks = new Sprite(16, 6, 0, SpriteSheet.tiles);
 	
 	public static Sprite voidSprite = new Sprite(16, 0xfc0cf);
 	
 	//Spawn Level Sprites here:
 	public static Sprite spawn_grass = new Sprite(16, 0, 0, SpriteSheet.spawn_level);
+	public static Sprite Spawn_dirt = new Sprite(16, 1, 0, SpriteSheet.spawn_level);
+	public static Sprite Spawn_tilledDirt = new Sprite(16, 1, 1, SpriteSheet.spawn_level);
 	public static Sprite spawn_flower = new Sprite(16, 0, 1, SpriteSheet.spawn_level);
 	public static Sprite spawn_rock = new Sprite(16, 0, 2, SpriteSheet.spawn_level);
-	public static Sprite spawn_cobble = new Sprite(16, 1, 0, SpriteSheet.spawn_level);
-	public static Sprite spawn_cobble2 = new Sprite(16, 1, 1, SpriteSheet.spawn_level);
-	public static Sprite spawn_door = new Sprite(16, 2, 0, SpriteSheet.spawn_level);
-	public static Sprite spawn_glass = new Sprite(16, 3, 0, SpriteSheet.spawn_level);
-	public static Sprite spawn_crate = new Sprite(16, 4, 0, SpriteSheet.spawn_level);
-	public static Sprite spawn_bricks = new Sprite(16, 5, 0, SpriteSheet.spawn_level);
+	public static Sprite spawn_cobble = new Sprite(16, 2, 0, SpriteSheet.spawn_level);
+	public static Sprite spawn_cobble2 = new Sprite(16, 2, 1, SpriteSheet.spawn_level);
+	public static Sprite spawn_door = new Sprite(16, 3, 0, SpriteSheet.spawn_level);
+	public static Sprite spawn_glass = new Sprite(16, 4, 0, SpriteSheet.spawn_level);
+	public static Sprite spawn_crate = new Sprite(16, 5, 0, SpriteSheet.spawn_level);
+	public static Sprite spawn_bricks = new Sprite(16, 6, 0, SpriteSheet.spawn_level);
 
 	//player Level Sprites here:
 	

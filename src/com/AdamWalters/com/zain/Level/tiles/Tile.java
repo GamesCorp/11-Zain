@@ -18,6 +18,8 @@ public class Tile {
 	public Sprite sprite;
 	
 	public static Tile grass = new GrassTile(Sprite.grass);
+	public static Tile dirt = new GrassTile(Sprite.dirt);
+	public static Tile tilledDirt = new GrassTile(Sprite.tilledDirt);
 	public static Tile flower = new FlowerTile(Sprite.flower);
 	public static Tile rock = new RockTile(Sprite.rock);
 	public static Tile cobble = new CobbleTile(Sprite.cobble);
@@ -29,6 +31,8 @@ public class Tile {
 	public static Tile voidTile = new VoidTile(Sprite.voidSprite);
 	
 	public static Tile spawn_grass = new SpawnGrassTile(Sprite.spawn_grass);
+	public static Tile spawn_dirt = new SpawnGrassTile(Sprite.dirt);
+	public static Tile spawn_tilledDirt = new SpawnGrassTile(Sprite.tilledDirt);
 	public static Tile spawn_flower = new SpawnFlowerTile(Sprite.spawn_flower);
 	public static Tile spawn_rock = new SpawnRockTile(Sprite.spawn_rock);
 	public static Tile spawn_cobble = new SpawnCobbleTile(Sprite.spawn_cobble);
@@ -39,6 +43,8 @@ public class Tile {
 	public static Tile spawn_bricks = new SpawnBricksTile(Sprite.spawn_bricks);
 	
 	public static final int col_spawn_grass = 0xff00ff00;
+	public static final int col_spawn_dirt = 0xffA54200;
+	public static final int col_spawn_tilledDirt= 0xff963C00;
 	public static final int col_spawn_flower = 0xffffff00;
 	public static final int col_spawn_rock = 0xff808080;
 	public static final int col_spawn_cobble = 0xff282828;
