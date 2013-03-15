@@ -1,7 +1,7 @@
 package com.AdamWalters.com.zain.Level;
 
-import com.AdamWalters.com.zain.Level.tiles.Tile;
 import com.AdamWalters.com.zain.graphics.Screen;
+import com.AdamWalters.com.zain.Level.tiles.Tile;
 
 public class Level {
 	
@@ -37,6 +37,16 @@ public class Level {
 	}
 	
 	public void render(int xScroll, int yScroll, Screen screen) {
+		
+        if (xScroll < 0)
+        	xScroll = 0;
+        if (xScroll > ((width << 3) - screen.width))
+        	xScroll = ((width << 3) - screen.width);
+        if (yScroll < 0)
+        	yScroll = 0;
+        if (yScroll > ((height << 3) - screen.height))
+        	yScroll = ((height << 3) - screen.height);
+        
 		screen.setOffset(xScroll, yScroll);
 		/** >> 4 = /16 **/
 		int x0 = xScroll >> 4;
@@ -56,8 +66,6 @@ public class Level {
 	public Tile getTile(int x, int y) {
 		if (x < 0 || y < 0 || x >= width || y >= height) return Tile.voidTile;
 		if (tiles[x + y * width] == Tile.col_spawn_grass) return Tile.spawn_grass;
-		if (tiles[x + y * width] == Tile.col_spawn_dirt) return Tile.spawn_dirt;
-		if (tiles[x + y * width] == Tile.col_spawn_tilledDirt) return Tile.spawn_tilledDirt;
 		if (tiles[x + y * width] == Tile.col_spawn_flower) return Tile.spawn_flower;
 		if (tiles[x + y * width] == Tile.col_spawn_rock) return Tile.spawn_rock;
 		if (tiles[x + y * width] == Tile.col_spawn_cobble) return Tile.spawn_cobble;
@@ -65,7 +73,7 @@ public class Level {
 		if (tiles[x + y * width] == Tile.col_spawn_door) return Tile.spawn_door;
 		if (tiles[x + y * width] == Tile.col_spawn_glass) return Tile.spawn_glass;
 		if (tiles[x + y * width] == Tile.col_spawn_crate) return Tile.spawn_crate;
-		if (tiles[x + y * width] == Tile.col_spawn_bricks) return Tile.spawn_bricks;
+		if (tiles[x + y * width] == Tile.col_spawn_spawnpoint) return Tile.spawn_spawnpoint;
 		
 		return Tile.voidTile;
 	}
