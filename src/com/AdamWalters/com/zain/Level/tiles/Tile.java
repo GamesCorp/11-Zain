@@ -1,6 +1,7 @@
 package com.AdamWalters.com.zain.Level.tiles;
 
-import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnBricksTile;
+import com.AdamWalters.com.zain.graphics.Screen;
+import com.AdamWalters.com.zain.graphics.Sprite;
 import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnCobble2Tile;
 import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnCobbleTile;
 import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnCrateTile;
@@ -9,17 +10,14 @@ import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnFlowerTile;
 import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnGlassTile;
 import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnGrassTile;
 import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnRockTile;
-import com.AdamWalters.com.zain.graphics.Screen;
-import com.AdamWalters.com.zain.graphics.Sprite;
+import com.AdamWalters.com.zain.Level.tiles.spawn_level.SpawnSpawnPointTile;
 
 public class Tile {
 	
 	public int x, y;
 	public Sprite sprite;
-	
+    public static final Tile[] tiles = new Tile[256];
 	public static Tile grass = new GrassTile(Sprite.grass);
-	public static Tile dirt = new GrassTile(Sprite.dirt);
-	public static Tile tilledDirt = new GrassTile(Sprite.tilledDirt);
 	public static Tile flower = new FlowerTile(Sprite.flower);
 	public static Tile rock = new RockTile(Sprite.rock);
 	public static Tile cobble = new CobbleTile(Sprite.cobble);
@@ -27,12 +25,11 @@ public class Tile {
 	public static Tile door = new DoorTile(Sprite.door);
 	public static Tile glass = new GlassTile(Sprite.glass);
 	public static Tile crate = new CrateTile(Sprite.crate);
-	public static Tile bricks = new BricksTile(Sprite.bricks);
+	public static Tile spawnpoint = new SpawnPointTile(Sprite.spawnpoint);
 	public static Tile voidTile = new VoidTile(Sprite.voidSprite);
 	
+
 	public static Tile spawn_grass = new SpawnGrassTile(Sprite.spawn_grass);
-	public static Tile spawn_dirt = new SpawnGrassTile(Sprite.dirt);
-	public static Tile spawn_tilledDirt = new SpawnGrassTile(Sprite.tilledDirt);
 	public static Tile spawn_flower = new SpawnFlowerTile(Sprite.spawn_flower);
 	public static Tile spawn_rock = new SpawnRockTile(Sprite.spawn_rock);
 	public static Tile spawn_cobble = new SpawnCobbleTile(Sprite.spawn_cobble);
@@ -40,11 +37,10 @@ public class Tile {
 	public static Tile spawn_door = new SpawnDoorTile(Sprite.spawn_door);
 	public static Tile spawn_glass = new SpawnGlassTile(Sprite.spawn_glass);
 	public static Tile spawn_crate = new SpawnCrateTile(Sprite.spawn_crate);
-	public static Tile spawn_bricks = new SpawnBricksTile(Sprite.spawn_bricks);
+	public static Tile spawn_spawnpoint = new SpawnSpawnPointTile(Sprite.spawn_spawnpoint);
+	
 	
 	public static final int col_spawn_grass = 0xff00ff00;
-	public static final int col_spawn_dirt = 0xffA54200;
-	public static final int col_spawn_tilledDirt= 0xff963C00;
 	public static final int col_spawn_flower = 0xffffff00;
 	public static final int col_spawn_rock = 0xff808080;
 	public static final int col_spawn_cobble = 0xff282828;
@@ -52,7 +48,7 @@ public class Tile {
 	public static final int col_spawn_door = 0xff000000;
 	public static final int col_spawn_glass = 0xff43DBDB;
 	public static final int col_spawn_crate = 0xff7F3300;
-	public static final int col_spawn_bricks = 0xffFF0010;
+	public static final int col_spawn_spawnpoint = 0xffffffff;
 	
 	public Tile(Sprite sprite) {
 		this.sprite = sprite;

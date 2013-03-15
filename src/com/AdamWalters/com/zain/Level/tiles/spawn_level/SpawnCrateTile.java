@@ -1,9 +1,8 @@
 package com.AdamWalters.com.zain.Level.tiles.spawn_level;
 
-import com.AdamWalters.com.zain.Level.tiles.Tile;
 import com.AdamWalters.com.zain.graphics.Screen;
 import com.AdamWalters.com.zain.graphics.Sprite;
-
+import com.AdamWalters.com.zain.Level.tiles.Tile;
 public class SpawnCrateTile extends Tile {
 
 	public SpawnCrateTile(Sprite sprite) {
